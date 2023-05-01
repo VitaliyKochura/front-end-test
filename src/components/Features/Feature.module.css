@@ -1,0 +1,44 @@
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+
+.feature:hover .feature-icon {
+    background-color: #414042;
+    cursor: pointer;
+}
+
+.feature:hover a {
+    color: #4bcaff;
+    cursor: pointer;
+}
+
+.feature-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #4bcaff;
+    margin-bottom: 25px;
+}
+
+.feature h3 {
+    margin-bottom: 18px;
+}
+
+.feature h3 a {
+    font-size: 15px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #414042;
+}
+
+.feature p {
+    font-size: 13px;
+    color: #838383;
+    line-height: 150%;
+}

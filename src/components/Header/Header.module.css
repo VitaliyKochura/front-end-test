@@ -1,0 +1,110 @@
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 9%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list a {
+    color: white;
+    margin-left: 40px;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 13px;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+.nav-list a:hover, .nav-list a.active {
+    color: #4bcaff;
+}
+
+.nav-list a.active {
+    font-weight: 600;
+}
+
+.nav-list a::before {
+    content: '';
+    position: absolute;
+    top: -295%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: all .50s ease;
+}
+
+.nav-list a:hover::before, .nav-list a.active::before, .nav-list a.active:hover::before {
+    background-color: #4bcaff;
+}
+
+#hamburger-menu-icon {
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 1230px) {
+    header {
+        padding: 10px 3%;
+        transition: .2s;
+    }
+
+    .nav-list a::before {
+        top: -215%;
+        transition: .2s;
+    }
+}
+
+
+@media (max-width: 955px) {
+    #hamburger-menu-icon {
+        display: block;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 280px;
+        height: auto;
+        background: #1d4c5e;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px 20px;
+        transition: all .50s ease;
+    }
+
+    .nav-list a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-list a::before {
+        content: '';
+        position: absolute;
+        top: -30%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: transparent;
+        transition: all .50s ease;
+    }
+
+    .nav-list.open {
+        right: 0;
+    }
+}
+
+

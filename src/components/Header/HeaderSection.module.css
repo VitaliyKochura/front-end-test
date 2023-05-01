@@ -1,0 +1,247 @@
+.header-base {
+    width: 100%;
+    min-height: 50em;
+    background-image: url("../../assets/images/base.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: center;
+    box-shadow: inset 0 -3px 0 #4bcaff;
+    padding: 0 9% 0 0;
+    grid-template-areas: "header-base-image header-base-text";
+    transition: background 0.5s ease-in-out;
+}
+
+.header-base-image {
+    grid-area: header-base-image;
+    align-self: end;
+}
+
+.header-base-image img {
+    height: auto;
+}
+
+.header-base-text p:last-of-type {
+    grid-area: header-base-text;
+}
+
+.header-base-text h1 {
+    margin-top: 220px;
+    color: white;
+    font-weight: 300;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.header-base-text p {
+    color: white;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.header-base-text p:first-of-type {
+    margin-bottom: 20px;
+}
+
+.header-base-text a {
+    display: inline-block;
+    color: white;
+    padding: 22px 51px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    background: transparent;
+    border: 2px solid white;
+    transition: all .40s ease;
+}
+
+.header-base-text a:hover {
+    background-color: #4bcaff;
+    border: 2px solid #4bcaff;
+    box-shadow: 0 4px 0 0 #277697;
+}
+
+.header-base-text a:last-of-type {
+    margin-left: 40px;
+    margin-bottom: 70px;
+}
+
+.header-base-text p:last-of-type {
+    display: flex;
+    align-items: center;
+}
+
+#apple-icon, #android-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 26px;
+    margin-left: 20px;
+}
+
+#apple-icon:hover, #android-icon:hover {
+    color: #4bcaff;
+    cursor: pointer;
+}
+
+#left-arrow, #right-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(75, 202, 255, 0.2);
+    font-size: 13px;
+    color: white;
+    position: absolute;
+    user-select: none;
+}
+
+#left-arrow {
+    left: 5%;
+}
+
+#right-arrow {
+    right: 5%;
+}
+
+#left-arrow:hover, #right-arrow:hover {
+    background-color: #4bcaff;
+    color: #1d4c5e;
+    cursor: pointer;
+}
+
+.header-base .indicators {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+
+.header-base .indicator {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid white;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header-base .indicator.active {
+    background-color: #4bcaff;
+    border: 7px solid #4bcaff;
+}
+
+@media (max-width: 1230px) {
+    .header-base {
+        padding: 0 12% 0 0;
+        transition: .2s;
+    }
+
+    .header-base-text h1 {
+        font-size: 36px;
+    }
+
+    .header-base-text p {
+        color: white;
+        font-weight: 200;
+        font-size: 14px;
+    }
+
+    .header-base-text a {
+        display: table;
+        padding: 17px 46px;
+        font-size: 15px;
+    }
+
+    .header-base-text a:last-of-type {
+        margin: 20px 0 30px 0;
+    }
+}
+
+@media (max-width: 1110px) {
+    .header-base-image img {
+        width: 530px;
+        height: auto;
+    }
+
+    .header-base {
+        height: 100%;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        grid-template-areas:
+        "header-base-text"
+        "header-base-image";
+    }
+
+    .header-base-text {
+        padding: 0 9%;
+        transition: .2s;
+    }
+
+    .header-base-text h1 {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 660px) {
+    .header-base-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .header-base-text {
+        padding: 0 22%;
+    }
+
+    #left-arrow, #right-arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 440px) {
+    .header-base-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .header-base-text {
+        padding: 0 24%;
+        transition: .2s;
+    }
+
+    .header-base-text p {
+        color: white;
+        font-weight: 200;
+        font-size: 13px;
+    }
+
+    .header-base-text a {
+        display: table;
+        padding: 12px 35px;
+        font-size: 14px;
+    }
+
+    #apple-icon, #android-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+        margin-left: 6px;
+    }
+}
