@@ -1,0 +1,58 @@
+.gallery {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.gallery-item h3 {
+    width: 100%;
+    position: absolute;
+    bottom: 2%;
+    padding: 12px 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.4);
+    color: #4bcaff;
+    border-radius: 0 0 7px 7px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+    background-color: rgba(75, 202, 255, 0.75);
+    border-radius: 7px;
+    display: none;
+}
+
+.overlay::before {
+    font-family: "Font Awesome 5 Free", sans-serif;
+    text-shadow:  0 2px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 900;
+    content: "\f067";
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.gallery:hover .overlay {
+    display: block;
+    cursor: pointer;
+}
+
+.gallery-item p {
+    font-size: 13px;
+    color: #838383;
+    line-height: 150%;
+    padding: 0 10%;
+}

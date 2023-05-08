@@ -27,7 +27,7 @@ const FeaturesSection = () => {
     ];
 
     return (
-        <section className={styles['features']} data-nav="features">
+        <section className={styles['content-section']} data-nav="features">
             <div className={styles['center-title']}>
                 <h1>summarise the features</h1>
                 <p>summarise what your product is all about</p>

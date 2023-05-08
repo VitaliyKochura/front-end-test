@@ -60,13 +60,16 @@ const Header = () => {
                            onClick={(e) => handleNavigationClick(e, 'home')}>Home</a></li>
                     <li><a href="#" className={activeSection === 'features' ? `${styles.active}` : ''}
                            onClick={(e) => handleNavigationClick(e, 'features')}>Features</a></li>
-                    <li><a href="#" className={activeSection === 'gallery' ? `${styles.active}` : ''}>Gallery</a></li>
-                    <li><a href="#" className={activeSection === 'video' ? `${styles.active}` : ''}>Video</a></li>
+                    <li><a href="#" className={activeSection === 'gallery' ? `${styles.active}` : ''}
+                           onClick={(e) => handleNavigationClick(e, 'gallery')}>Gallery</a></li>
+                    <li><a href="#" className={activeSection === 'video' ? `${styles.active}` : ''}
+                           onClick={(e) => handleNavigationClick(e, 'video')}>Video</a></li>
                     <li><a href="#" className={activeSection === 'prices' ? `${styles.active}` : ''}>Prices</a></li>
                     <li><a href="#"
                            className={activeSection === 'testimonials' ? `${styles.active}` : ''}>Testimonials</a></li>
                     <li><a href="#" className={activeSection === 'download' ? `${styles.active}` : ''}>Download</a></li>
-                    <li><a href="#" className={activeSection === 'contact' ? `${styles.active}` : ''}>Contact</a></li>
+                    <li><a href="#" className={activeSection === 'contact' ? `${styles.active}` : ''}
+                           onClick={(e) => handleNavigationClick(e, 'contact')}>Contact</a></li>
                 </ul>
                 {isOpen ? <IoClose id={styles['hamburger-menu-icon']} onClick={() => setIsOpen(!isOpen)}/> :
                     <GiHamburgerMenu id={styles['hamburger-menu-icon']} onClick={() => setIsOpen(!isOpen)}/>}
